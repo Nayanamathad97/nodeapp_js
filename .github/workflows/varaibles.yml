@@ -15,7 +15,7 @@ on:
 
       version:
         description: 'Application version'
-        required: True
+        required: true
         default: "v1.0.0"    
 
 env:     
@@ -29,8 +29,8 @@ jobs:
       steps:
         - name: Display Inputs
           run: |
-            echo: "Environment: ${{ env.GLOBAL_ENV }}"
-            echo: "Version: ${{ inputs.version }}"
+            echo "Environment: ${{ env.GLOBAL_ENV }}"
+            echo "Version: ${{ inputs.version }}"
 
         - name: Global Environment Variable
           run: |
@@ -38,7 +38,7 @@ jobs:
  
         - name: job1 environemnt varaible
           run: |
-            echo " Environment Variable: $JOB1_ENV"
+            echo "Environment Variable: $JOB1_ENV"
 
     job2:
       runs-on: ubuntu-latest
