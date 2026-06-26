@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start the app
+        run: npm start &
+
+      - name: Wait for application to boot
+        run: sleep 10
+
+      - name: Check health
+        run: curl http://localhost:3000 || exit 1
