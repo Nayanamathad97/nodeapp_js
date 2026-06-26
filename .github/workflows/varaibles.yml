@@ -21,7 +21,7 @@ on:
 env:     
   GLOBAL_ENV: " 1 Tire App"
 
-  jobs:
+jobs:
     job1:
       runs-on: ubuntu-latest
       env: 
