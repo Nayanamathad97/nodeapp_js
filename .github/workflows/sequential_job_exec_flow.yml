@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: job1
-        run: exit 1
+        run: sleep 3
   
   job2:
     needs: job1
