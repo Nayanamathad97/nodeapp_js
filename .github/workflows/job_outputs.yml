@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      job1_output: ${{ steps.step1.outputs.msg }}
+      job1_output: ${{ steps.step2.outputs.msg }}
 
     steps:
       - name: set a variable
