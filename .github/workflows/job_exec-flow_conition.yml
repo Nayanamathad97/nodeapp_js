@@ -27,7 +27,7 @@ jobs:
         run: echo "job2 running"
 
   job3:
-    if: ${{ inputs.jobs_to_run == 'job3' || inputs.jobs_to_run == 'job1'}}
+    if: ${{ inputs.jobs_to_run == 'job3' || inputs.jobs_to_run == 'all'}}
     runs-on: ubuntu-latest
 
     steps:
