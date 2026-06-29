@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: create files
-        run:
+        run: |
           mkdir build
           echo "This is test build" > build/info.txt
 
