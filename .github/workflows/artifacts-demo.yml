@@ -3,30 +3,31 @@ name: Artifacts
 on: workflow_dispatch
 
 jobs:
-  job1:
-    runs-on: ubuntu-latest
+  # job1:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: create files
-        run: |
-          mkdir build
-          echo "This is test build" > build/info.txt
+  #   steps:
+  #     - name: create files
+  #       run: |
+  #         mkdir build
+  #         echo "This is test build" > build/info.txt
 
-      - name: upload the build folder
-        uses: actions/upload-artifact@v7
-        with:
-          name: build-output
-          path: build/
+  #     - name: upload the build folder
+  #       uses: actions/upload-artifact@v7
+  #       with:
+  #         name: build-output
+  #         path: build/
 
   job2:
-    needs: job1 
+    # needs: job1 
     runs-on: ubuntu-latest
     steps:
       - name: download artifacts
         uses: actions/download-artifact@v8
         with:
-            name: build-output
+            run-id: 7949524212
             path: ./build
+            github-token: ${{ secrets.ARTIFACT_DEMO_TOKEN}}
 
       - name: display the file contents
         run: |
