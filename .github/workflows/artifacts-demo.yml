@@ -25,7 +25,7 @@ jobs:
       - name: download artifacts
         uses: actions/download-artifact@v8
         with:
-          - name: build-output
+            name: build-output
             path: ./build
 
       - name: display the file contents
