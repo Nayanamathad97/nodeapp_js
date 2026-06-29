@@ -18,7 +18,7 @@ jobs:
           name: build-output
           path: build/
 
-    job2:
+  job2:
     needs: job1 
     runs-on: ubuntu-latest
     steps:
@@ -32,6 +32,8 @@ jobs:
         run: |
           ls -lart ./build
           cat ./build/info.txt
+
+ ## or for the second demo comment the above job2 and enable the below job2.
 
     # job2:
     # # needs: job1 
