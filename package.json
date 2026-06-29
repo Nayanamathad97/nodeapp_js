@@ -7,4 +7,9 @@
     "start": "node app.js"
   },
   "license": "MIT"
+},
+"dependencies": {
+    "express": "^4.21.1"
+  },
+  "license": "MIT"
 }
