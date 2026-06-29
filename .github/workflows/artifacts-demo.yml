@@ -10,7 +10,7 @@ jobs:
       - name: create files
         run:
           mkdir build
-          echo "This is test build" >> build/info.txt
+          echo "This is test build" > build/info.txt
 
       - name: upload the build folder
         uses: actions/upload-artifact@v7
