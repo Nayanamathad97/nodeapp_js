@@ -23,4 +23,5 @@ runs:
     - name: 'set-output'
       id: step1
       run: echo "result=success" >> $GITHUB_OUTPUT
+      shell: bash
     
