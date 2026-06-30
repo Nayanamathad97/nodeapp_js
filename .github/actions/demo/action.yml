@@ -9,9 +9,9 @@ inputs:
     default: 'world'
 
 outputs:
-  demo -output:
+  demo-output:
     description: 'Result from the custom action'
-    value: ${{ steps.step1.outputs.result }}
+    value: ${{ steps.set-output.outputs.result }}
 
 runs: 
   using: 'composite'
@@ -21,7 +21,7 @@ runs:
       shell: bash
 
     - name: 'set-output'
-      id: step1
+      id: set-output
       run: echo "result=success" >> $GITHUB_OUTPUT
       shell: bash
     

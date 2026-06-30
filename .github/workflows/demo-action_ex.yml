@@ -7,14 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout the code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7 
 
       - name: run the demo action
+        id: demo
         uses: ./.github/actions/demo
         with:
           who-to-greet: 'Preethu'
 
       - name: display the output
-        run: echo "output = ${{ steps.step1.outputs.demo-output }}"
+        run: echo "output = ${{ steps.demo.outputs.demo-output }}"
 
       
